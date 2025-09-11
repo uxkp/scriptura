@@ -6,10 +6,13 @@ import dbConfig from "@/services/dbConfig";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function MyBlogsPage() {
   const [blogs, setBlogs] = useState([]);
   const userData = useSelector((state) => state.auth.userData);
+  const loggedIn = useSelector((state) => state.auth.status);
+  const router = useRouter();
 
   useEffect(() => {
     dbConfig.getPosts().then((posts) => {
@@ -17,6 +20,16 @@ export default function MyBlogsPage() {
       setBlogs(posts?.rows);
     });
   }, []);
+
+  useEffect(() => {
+    if (!loggedIn) {
+      router.replace("/login");
+    }
+  }, [loggedIn, router]);
+
+  if (!loggedIn) {
+    return null;
+  }
 
   return (
     <>
