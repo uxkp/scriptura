@@ -1,0 +1,15 @@
+.ql-container.ql-snow {
+  border: none;
+}
+
+.ql-toolbar.ql-snow {
+  border: none;
+}
+
+.ql-editor {
+  min-height: 40vh;
+}
+
+button.ql-clean {
+  display: none !important;
+}
