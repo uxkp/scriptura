@@ -47,8 +47,8 @@ class AuthService {
     try {
       return this.account.createOAuth2Session({
         provider: OAuthProvider.Google,
-        success: "http://localhost:3000/",
-        failure: "http://localhost:3000/error",
+        success: "https://scriptura-five.vercel.app/",
+        failure: "https://scriptura-five.vercel.app/",
       });
     } catch (error) {
       console.log(error);
@@ -59,8 +59,8 @@ class AuthService {
     try {
       return this.account.createOAuth2Session({
         provider: OAuthProvider.Github,
-        success: "http://localhost:3000/",
-        failure: "http://localhost:3000/error",
+        success: "https://scriptura-five.vercel.app/",
+        failure: "https://scriptura-five.vercel.app/",
       });
     } catch (error) {
       console.log(error);
