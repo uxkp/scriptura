@@ -1,13 +1,8 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import localFont from "next/font/local";
 import Providers from "./provider";
 import { AlertProvider } from "@/components/AlertProvider";
 import HolyLoader from "holy-loader";
-
-export const handwritten = localFont({
-  src: [{ path: "../assets/Antagon.otf", weight: "400", style: "normal" }],
-});
 
 const poppins = Poppins({
   variable: "--font-poppins",

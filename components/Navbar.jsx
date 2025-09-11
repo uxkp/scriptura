@@ -174,6 +174,7 @@ const Navbar = () => {
             onClick={(e) => {
               if (!loggedIn) {
                 e.preventDefault();
+                e.nativeEvent.stopImmediatePropagation();
                 setDesc("You must be logged in, to create a blog.");
                 setLoginModalToggle(true);
               }
@@ -188,6 +189,7 @@ const Navbar = () => {
             onClick={(e) => {
               if (!loggedIn) {
                 e.preventDefault();
+                e.nativeEvent.stopImmediatePropagation();
                 setDesc("You must be logged in to see your blogs.");
                 setLoginModalToggle(true);
               }

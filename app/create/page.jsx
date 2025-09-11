@@ -21,7 +21,7 @@ const CreatePage = () => {
     "Education",
   ];
 
-  const { push } = useRouter();
+  const router = useRouter();
   const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
   const [title, setTitle] = useState("");
@@ -38,6 +38,7 @@ const CreatePage = () => {
   };
   const { quill, quillRef } = useQuill(options);
   const userData = useSelector((state) => state.auth.userData);
+  const loggedIn = useSelector((state) => state.auth.status);
 
   const submit = async () => {
     if (image) {
@@ -52,7 +53,7 @@ const CreatePage = () => {
           userEmail: userData.data.email,
           category: selected,
         });
-        push("/");
+        router.push("/");
       }
     }
   };
@@ -64,6 +65,16 @@ const CreatePage = () => {
       });
     }
   }, [quill]);
+
+  useEffect(() => {
+    if (!loggedIn) {
+      router.replace("/login");
+    }
+  }, [loggedIn, router]);
+
+  if (!loggedIn) {
+    return null;
+  }
 
   return (
     <div>
