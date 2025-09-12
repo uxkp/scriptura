@@ -123,6 +123,12 @@ const Navbar = ({ hidden }) => {
           >
             My Blogs
           </Link>
+          <Link
+            className="text-sm md:text-base hover:text-[#ab8bff] transition-colors duration-300"
+            href="/about"
+          >
+            About
+          </Link>
         </div>
       </div>
       <div className="flex items-center">
@@ -201,6 +207,12 @@ const Navbar = ({ hidden }) => {
             }}
           >
             My Blogs
+          </Link>
+          <Link
+            className="text-base font-medium hover:text-[#ab8bff] transition-colors duration-300"
+            href="/my-blogs"
+          >
+            About
           </Link>
           {!loggedIn && (
             <Link

@@ -11,7 +11,6 @@ const BlogCard = ({ blog, image, showDelete }) => {
       href={`/posts/${blog.$id}`}
       className="relative cursor-pointer bg-[#27272a] rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 overflow-hidden"
     >
-      {/* Delete button */}
       {showDelete && (
         <button
           className="absolute top-3 right-3 px-2 py-2 w-[40px] h-[40px] z-10 flex justify-center items-center text-white cursor-pointer bg-[#ff6d6d] hover:scale-110 transition-all duration-300 rounded-full"
