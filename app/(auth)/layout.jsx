@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { handwritten } from "@/app/fonts";
 
 const Layout = ({ children }) => {
@@ -23,7 +22,6 @@ const Layout = ({ children }) => {
             </p>
           </div>
         </div>
-        {/* <Image src={vector} alt="vector" width={230} className="mx-auto mt-10" /> */}
       </section>
       <section className="flex flex-1 flex-col items-center p-4 py-10 lg:justify-center lg:p-10 lg:py-0">
         {children}

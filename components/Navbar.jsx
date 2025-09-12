@@ -93,7 +93,6 @@ const Navbar = ({ hidden }) => {
             height={45}
           />
         </Link>
-
         <div className="hidden sm:flex gap-6 md:gap-10">
           <Link
             className="text-sm md:text-base hover:text-[#ab8bff] transition-colors duration-300"
@@ -210,7 +209,7 @@ const Navbar = ({ hidden }) => {
           </Link>
           <Link
             className="text-base font-medium hover:text-[#ab8bff] transition-colors duration-300"
-            href="/my-blogs"
+            href="/about"
           >
             About
           </Link>
