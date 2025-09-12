@@ -53,7 +53,7 @@ export default async function PostPage({ params }) {
              [&>h2]:text-2xl [&>h2]:font-semibold [&>h2]:mt-5 [&>h2]:mb-3
              [&>h3]:text-xl [&>h3]:font-medium [&>h3]:mt-4 [&>h3]:mb-2
              [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-6 [&>ol]:list-decimal [&>ol]:pl-6
-             [&>strong]:font-bold [&>em]:italic"
+             [&>strong]:font-bold [&>em]:italic [&>a]:text-purple-600"
                 dangerouslySetInnerHTML={{ __html: blog.content }}
               />
             </div>

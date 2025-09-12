@@ -43,7 +43,7 @@ export default function MyBlogsPage() {
               .map(
                 (blog, index) =>
                   userData?.data?.email === blog.userEmail && (
-                    <BlogCard key={index} blog={blog} />
+                    <BlogCard blog={blog} showDelete="true" key={index} />
                   )
               )}
           </div>
