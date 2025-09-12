@@ -12,6 +12,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import spinner from "@/assets/spinner1.svg";
 import Image from "next/image";
 import { handwritten } from "@/app/fonts";
+import { useAlert } from "./AlertProvider";
 
 const schema = z.object({
   email: z.string().email("Please enter a valid email."),
@@ -29,6 +30,7 @@ const Login = () => {
     resolver: zodResolver(schema),
   });
   const router = useRouter();
+  const { showAlert } = useAlert();
 
   const login = async (data) => {
     try {
@@ -36,6 +38,7 @@ const Login = () => {
       if (session) {
         const userData = await authService.getCurrentUser();
         if (userData) dispatch(authLogin(userData));
+        showAlert("Logged in successfully!");
         router.push("/");
       }
     } catch (error) {
