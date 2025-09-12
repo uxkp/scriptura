@@ -74,8 +74,8 @@ const CreatePage = () => {
   return (
     <div>
       <Navbar page="create" />
-      <div className="relative min-h-screen bg-[#19191C]">
-        <div className="absolute inset-0 -z-10 blur-[100px] bg-[#1f192d]/30" />
+      <div className="relative w-[100%] min-h-screen z-0 h-[100%] bg-[#19191C]">
+        <div className="absolute -z-1 blur-[100px] top-0 left-0 w-[50vw] h-[100vh] bg-[#1f192d] rounded-br-full" />
         <div className="pt-28 px-4 md:px-8">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
             <div className="flex-1 space-y-6">
