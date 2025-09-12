@@ -49,13 +49,13 @@ const Login = () => {
         className="flex flex-col justify-center space-y-5"
         onSubmit={handleSubmit(login)}
       >
-        <div className="flex flex-col items-center sm:items-start mb-8">
+        <div className="flex flex-col items-center lg:items-start mb-8">
           <h1
-            className={`${handwritten.className} text-[42px] sm:hidden bg-linear-to-r from-[#D6C7FF] to-[#602be8] bg-clip-text text-transparent mb-2 tracking-wide`}
+            className={`${handwritten.className} text-[42px] lg:hidden bg-linear-to-r from-[#D6C7FF] to-[#602be8] bg-clip-text text-transparent mb-2 tracking-wide`}
           >
             Scriptura
           </h1>
-          <h2 className="text-base sm:text-[32px] font-semibold text-center sm:text-left text-white">
+          <h2 className="text-base lg:text-[32px] font-semibold text-center lg:text-left text-white">
             Login
           </h2>
         </div>

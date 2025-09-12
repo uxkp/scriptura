@@ -1,9 +1,11 @@
 import { handwritten } from "@/app/fonts";
+import illustration from "@/assets/illustration.png";
+import Image from "next/image";
 
 const Layout = ({ children }) => {
   return (
-    <div className="flex min-h-screen min-w-screen bg-[#19191C]">
-      <section className="bg-[#19191C] hidden md:block border-r-2 border-r-[#232325] relative shadow-2xl max-w-[35vw] overflow-hidden p-10 z-1000">
+    <div className="flex relative min-h-screen min-w-screen bg-[#19191C]">
+      <section className="bg-[#19191C] hidden lg:block border-r-2 border-r-[#232325] relative shadow-2xl max-w-[35vw] overflow-hidden p-10 z-1000">
         <div className="w-[300px] h-[300px] rounded-br-full absolute top-0 left-0 bg-[#1f192d] blur-3xl -z-20" />
         <div className="w-[300px] h-[300px] rounded-tl-full absolute bottom-0 right-0 bg-[#1f2b38] blur-3xl -z-20" />
         <div className="mt-10">
@@ -20,10 +22,16 @@ const Layout = ({ children }) => {
               Explore insightful blogs from others and share your own thoughts
               with the community.
             </p>
+            <Image
+              className="absolute bottom-8 w-[27vw] right-8"
+              src={illustration}
+              width={400}
+              alt="illustration"
+            />
           </div>
         </div>
       </section>
-      <section className="flex flex-1 flex-col items-center p-4 py-10 lg:justify-center lg:p-10 lg:py-0">
+      <section className="flex flex-1 flex-col items-center py-10 px-3 justify-center lg:p-10 lg:py-0">
         {children}
       </section>
     </div>
