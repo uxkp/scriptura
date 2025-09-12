@@ -1,4 +1,4 @@
-# Blog Website
+# Scriptura
 
 A modern and minimal blog platform built with **[Next.js](https://nextjs.org/)**, **[Appwrite](https://appwrite.io/)**, and **[Tailwind CSS](https://tailwindcss.com/)**.
 
