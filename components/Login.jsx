@@ -28,7 +28,7 @@ const Login = () => {
   } = useForm({
     resolver: zodResolver(schema),
   });
-  const { push } = useRouter();
+  const router = useRouter();
 
   const login = async (data) => {
     try {
@@ -36,7 +36,7 @@ const Login = () => {
       if (session) {
         const userData = await authService.getCurrentUser();
         if (userData) dispatch(authLogin(userData));
-        push("/");
+        router.push("/");
       }
     } catch (error) {
       setError("root", { message: error.message });

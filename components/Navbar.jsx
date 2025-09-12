@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from "react";
 import LoginModal from "./LoginModal";
 import { Menu, X } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({ hidden }) => {
   const loggedIn = useSelector((state) => state.auth.status);
   const userData = useSelector((state) => state.auth.userData);
   const [loginModalToggle, setLoginModalToggle] = useState(false);
@@ -63,7 +63,11 @@ const Navbar = () => {
   const displayName = userData?.data?.name || userData?.data?.email;
 
   return (
-    <div className="backdrop-blur-lg flex justify-between px-4 md:px-10 py-3 bg-[#1f1f1f]/10 border-b-[#3d3d41] border-b-1 items-center fixed top-0 left-0 w-full z-[10000] h-[70px]">
+    <div
+      className={`backdrop-blur-lg flex ${
+        hidden && "hidden"
+      } justify-between px-4 md:px-10 py-3 bg-[#404040]/10 border-b-[#3d3d41] border-b-1 items-center fixed top-0 left-0 w-full z-[10000] h-[70px]`}
+    >
       <LoginModal
         isOpen={loginModalToggle}
         onClose={() => setLoginModalToggle(false)}
@@ -156,7 +160,7 @@ const Navbar = () => {
                   </div>
                   <button
                     onClick={logoutHandler}
-                    className="w-full text-left px-4 py-2 text-sm text-white hover:bg-[#343437] transition-colors duration-200"
+                    className="w-full cursor-pointer text-left px-4 py-2 text-sm text-white hover:bg-[#343437] transition-colors duration-200"
                   >
                     Logout
                   </button>
@@ -167,9 +171,9 @@ const Navbar = () => {
         </div>
       </div>
       {mobileMenu && (
-        <div className="absolute top-[70px] left-0 w-full bg-[#1f1f1f] flex flex-col gap-5 p-6 sm:hidden z-[49] animate-slideDown">
+        <div className="bg-[#212121] absolute top-[70px] left-0 w-full flex flex-col gap-5 p-6 sm:hidden z-[49]">
           <Link
-            className="text-lg font-medium hover:text-[#ab8bff] transition-colors duration-300"
+            className="text-base font-medium hover:text-[#ab8bff] transition-colors duration-300"
             href="/create"
             onClick={(e) => {
               if (!loggedIn) {
@@ -184,7 +188,7 @@ const Navbar = () => {
             Create
           </Link>
           <Link
-            className="text-lg font-medium hover:text-[#ab8bff] transition-colors duration-300"
+            className="text-base font-medium hover:text-[#ab8bff] transition-colors duration-300"
             href="/my-blogs"
             onClick={(e) => {
               if (!loggedIn) {

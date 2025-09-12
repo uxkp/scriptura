@@ -37,7 +37,7 @@ export default async function PostPage({ params }) {
               >
                 {blog.category}
               </span>
-              <h1 className="text-4xl font-extrabold mb-6 leading-tight text-[#E4E4E7]">
+              <h1 className="text-2xl sm:text-4xl font-extrabold mb-6 leading-tight text-[#E4E4E7]">
                 {blog.title}
               </h1>
               <p className="text-sm text-gray-400 mb-8">
