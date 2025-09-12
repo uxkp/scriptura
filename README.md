@@ -18,6 +18,6 @@ A modern and minimal blog platform built with **[Next.js](https://nextjs.org/)**
 - **Frontend:** [Next.js](https://nextjs.org/) (App Router)
 - **Backend & Auth:** [Appwrite](https://appwrite.io/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Redux:** [State Management](https://redux.js.org/)
+- **State Management:** [Redux](https://redux.js.org/)
 
 ---
