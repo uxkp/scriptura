@@ -25,9 +25,6 @@ export default async function PostPage({ params }) {
         <div className="absolute -z-1 blur-[100px] top-0 left-0 w-[50vw] h-[100vh] bg-[#1f192d] rounded-br-full" />
         <div className="pt-32 mx-[8vw] flex justify-center">
           <div className="bg-[#27272A] rounded-2xl shadow-lg w-full max-w-4xl text-white overflow-hidden">
-            <div className="w-full h-64 bg-gray-700 flex items-center justify-center text-gray-400 text-xl font-medium">
-              Banner Image
-            </div>
             <div className="p-10">
               <span
                 className="inline-block px-3 py-1 text-xs font-medium text-black rounded-full mb-3"
