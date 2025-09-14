@@ -18,7 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} antialiased !important`}>
+      <body
+        className={`${poppins.className} antialiased text-white !important`}
+      >
         <HolyLoader color="#d6c7ff" height="0.2rem" />
         <Providers>
           <AlertProvider>{children}</AlertProvider>
