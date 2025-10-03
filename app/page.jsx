@@ -34,7 +34,7 @@ export default function Home() {
     <>
       <Navbar page="home" />
       <div className="relative w-[100%] min-h-screen z-0 h-[100%] bg-[#19191C]">
-        <div className="absolute -z-1 blur-[100px]  top-0 left-0 w-[50vw] h-[100vh] bg-[#1f192d] rounded-br-full" />
+        <div className="absolute -z-1 blur-[100px] top-0 left-0 w-[50vw] h-[100vh] bg-[#1f192d] rounded-br-full" />
         <div className="pt-32 mx-[8vw]">
           <h1 className="text-[38px] text-center font-semibold">
             Stories, Ideas, and{" "}
@@ -85,7 +85,6 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-
               <div className="mt-10 pb-10 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {filteredBlogs &&
                   [...filteredBlogs]

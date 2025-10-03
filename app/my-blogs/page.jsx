@@ -5,8 +5,6 @@ import BlogCard from "@/components/BlogCard";
 import dbConfig from "@/services/dbConfig";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export default function MyBlogsPage() {
   const [blogs, setBlogs] = useState([]);
@@ -15,7 +13,6 @@ export default function MyBlogsPage() {
 
   useEffect(() => {
     dbConfig.getPosts().then((posts) => {
-      console.log("Fetched posts:", posts);
       setBlogs(posts?.rows);
     });
   }, []);

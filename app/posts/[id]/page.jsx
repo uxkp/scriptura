@@ -11,7 +11,7 @@ export const categoryColors = {
 };
 
 export default async function PostPage({ params }) {
-  const { id } = params;
+  const { id } = await params;
   const blog = await dbConfig.getPost(id);
 
   if (!blog) {

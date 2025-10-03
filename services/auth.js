@@ -1,17 +1,15 @@
-import { Account, Avatars, Client, ID, OAuthProvider } from "appwrite";
+import { Account, Client, ID, OAuthProvider } from "appwrite";
 import { appwriteConfig } from "./config";
 
 class AuthService {
   client = new Client();
   account;
-  avatars;
 
   constructor() {
     this.client
       .setEndpoint(appwriteConfig.endpointUrl)
       .setProject(appwriteConfig.projectId);
     this.account = new Account(this.client);
-    this.avatars = new Avatars(this.client);
   }
 
   async createAccount({ email, password, name }) {
